@@ -1,0 +1,128 @@
+# Stable, internal evidence identifiers (FICTIONAL example data).
+# IDs are for validation/reporting only and are never printed on a resume.
+# `owner` must exactly match an experience `organization` in profile.yaml or a
+# project `name` in projects/*.yaml.
+version: 1
+items:
+  - id: EXP-001
+    kind: experience
+    owner: Example Analytics Co.
+    title: Data Engineering Intern
+    verified: true
+    text: Built a Python ETL pipeline that loads daily sales extracts into PostgreSQL and validates schema drift before each load.
+    source: profile.yaml experience entry
+    tags: [Python, ETL, PostgreSQL, data pipelines, data validation]
+  - id: EXP-002
+    kind: experience
+    owner: Example Analytics Co.
+    title: Data Engineering Intern
+    verified: true
+    text: Wrote SQL reporting views and a Flask dashboard used by the operations team to track weekly order volume.
+    source: profile.yaml experience entry
+    tags: [SQL, Flask, dashboards, reporting, analytics]
+  - id: EXP-003
+    kind: experience
+    owner: Campus Robotics Club
+    title: Software Lead
+    verified: true
+    text: Led a 4-person team building a React web console for monitoring robot telemetry over a REST API.
+    source: profile.yaml experience entry
+    tags: [React, JavaScript, REST APIs, monitoring, leadership]
+    metrics: [METRIC-001]
+  - id: EXP-004
+    kind: experience
+    owner: Campus Robotics Club
+    title: Software Lead
+    verified: true
+    text: Added unit tests and a GitHub Actions CI workflow so every pull request runs the full test suite.
+    source: profile.yaml experience entry
+    tags: [testing, CI/CD, GitHub Actions, Git]
+
+  - id: PROJ-001
+    kind: project
+    owner: MiniDB
+    verified: true
+    text: Built a small relational database engine in Java with a SQL subset, fixed-size pages, and a B+ tree primary-key index.
+    source: projects/minidb.yaml
+    tags: [Java, SQL, database internals, B+ tree, indexing, storage engines, backend]
+  - id: PROJ-002
+    kind: project
+    owner: MiniDB
+    verified: true
+    text: Implemented an LRU buffer pool with dirty-page flushing and restart persistence, covered by unit tests.
+    source: projects/minidb.yaml
+    tags: [Java, caching, persistence, unit testing, systems]
+  - id: PROJ-003
+    kind: project
+    owner: TaskGrid
+    verified: true
+    text: Built a distributed job runner in Python where a FastAPI coordinator assigns work to pull-based workers and persists state in SQLite.
+    source: projects/taskgrid.yaml
+    tags: [Python, FastAPI, SQLite, distributed systems, scheduling, backend, REST APIs]
+  - id: PROJ-004
+    kind: project
+    owner: TaskGrid
+    verified: true
+    text: Added worker heartbeats, lease-based job claims, and automatic retries so jobs recover when a worker stops responding.
+    source: projects/taskgrid.yaml
+    tags: [fault tolerance, distributed systems, reliability, Docker]
+  - id: PROJ-005
+    kind: project
+    owner: DocQA
+    verified: true
+    text: Built a document question-answering app that chunks PDFs, retrieves passages with TF-IDF, and generates grounded answers.
+    source: projects/docqa.yaml
+    tags: [Python, NLP, retrieval, TF-IDF, Scikit-learn, RAG, Streamlit]
+  - id: PROJ-006
+    kind: project
+    owner: DocQA
+    verified: true
+    text: Displayed the retrieved source passages next to each answer so users can check the grounding.
+    source: projects/docqa.yaml
+    tags: [information retrieval, user experience, explainability]
+  - id: PROJ-007
+    kind: project
+    owner: IncidentBot
+    verified: true
+    text: Built an incident-response workflow that correlates alerts with customer impact and drafts status updates for review.
+    source: projects/incidentbot.yaml
+    tags: [Python, incident response, reliability, workflow automation, agents]
+  - id: PROJ-008
+    kind: project
+    owner: IncidentBot
+    verified: true
+    text: Made every external action idempotent and verified after write, so retries never double-apply a change.
+    source: projects/incidentbot.yaml
+    tags: [idempotency, verification, webhooks, state machines]
+
+  - id: SKILL-001
+    kind: skill
+    owner: candidate profile
+    verified: true
+    text: Python
+    source: profile.yaml core_skills and verified projects
+  - id: SKILL-002
+    kind: skill
+    owner: candidate profile
+    verified: true
+    text: Java
+    source: profile.yaml core_skills and verified projects
+  - id: SKILL-003
+    kind: skill
+    owner: candidate profile
+    verified: true
+    text: SQL
+    source: profile.yaml core_skills and verified projects
+  - id: SKILL-004
+    kind: skill
+    owner: candidate profile
+    verified: true
+    text: Scikit-learn
+    source: profile.yaml core_skills and verified projects
+
+  - id: METRIC-001
+    kind: metric
+    owner: Campus Robotics Club
+    verified: true
+    text: 4-person team
+    source: EXP-003

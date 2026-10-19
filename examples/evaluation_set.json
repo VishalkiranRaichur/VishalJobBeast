@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Data Science Intern",
+    "company": "Epic Games",
+    "location": "Cary, NC",
+    "url": "https://example.test/epic",
+    "description": "Use Python, SQL, scikit-learn, behavioral data, and dashboards to detect abuse and evaluate models."
+  },
+  {
+    "title": "Backend Engineering Intern",
+    "company": "Example Systems",
+    "location": "Remote",
+    "url": "https://example.test/backend",
+    "description": "Build Java and SQL database internals, indexing, storage engines, persistence, and backend services."
+  },
+  {
+    "title": "Distributed Systems Intern",
+    "company": "Example Infrastructure",
+    "location": "Seattle, WA",
+    "url": "https://example.test/infra",
+    "description": "Build Python FastAPI services, Docker workers, CI/CD workflows, scheduling, retries, and fault-tolerant execution."
+  }
+]

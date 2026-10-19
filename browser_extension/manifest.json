@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Job Beast Companion",
+  "version": "0.1.0",
+  "description": "Local Job Beast ATS form executor.",
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*",
+    "https://*.greenhouse.io/*",
+    "https://*.lever.co/*",
+    "https://*.ashbyhq.com/*",
+    "https://*.myworkdayjobs.com/*",
+    "https://*.myworkday.com/*",
+    "https://*.myworkdaysite.com/*"
+  ],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [{
+    "matches": [
+      "https://job-boards.greenhouse.io/*",
+      "https://*.greenhouse.io/*",
+      "https://*.lever.co/*",
+      "https://*.ashbyhq.com/*",
+      "https://*.myworkdayjobs.com/*",
+      "https://*.myworkday.com/*",
+      "https://*.myworkdaysite.com/*"
+    ],
+    "js": ["content.js"],
+    "all_frames": true,
+    "run_at": "document_idle"
+  }]
+}

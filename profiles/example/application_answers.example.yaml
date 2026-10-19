@@ -1,0 +1,43 @@
+# Standard application answers (FICTIONAL example).
+# Copy to profiles/<you>/application_answers.yaml (gitignored) and fill in.
+# REQUIRES_USER_INPUT means "stop and ask the human" -- the browser operator
+# must never guess these.
+identity:
+  full_name: Alex Rivera
+  preferred_name: Alex
+  email: alex.rivera@example.com
+  phone: (555) 010-0100
+  city: Springfield
+  state: IL
+  country: United States
+  candidate_location: Springfield, Illinois, United States
+
+links:
+  github: https://github.com/example
+  linkedin: https://www.linkedin.com/in/example
+
+education:
+  institution: Example State University
+  degree: Bachelor of Science
+  major: Computer Science
+  graduation_month: May
+  graduation_year: "2028"
+
+work_preferences:
+  work_authorization: REQUIRES_USER_INPUT
+  sponsorship_now: REQUIRES_USER_INPUT
+  sponsorship_future: REQUIRES_USER_INPUT
+  relocation: REQUIRES_USER_INPUT
+  remote: REQUIRES_USER_INPUT
+  internship_start_date: REQUIRES_USER_INPUT
+
+compensation:
+  expected_salary: REQUIRES_USER_INPUT
+
+# Voluntary self-identification. Leave as DECLINE_TO_ANSWER unless you
+# deliberately choose to store your own answers in your private vault.
+demographics:
+  gender: DECLINE_TO_ANSWER
+  ethnicity: DECLINE_TO_ANSWER
+  veteran_status: DECLINE_TO_ANSWER
+  disability_status: DECLINE_TO_ANSWER

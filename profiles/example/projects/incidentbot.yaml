@@ -1,0 +1,12 @@
+# FICTIONAL example project. Replace with your own verified work.
+name: IncidentBot
+verified: true
+source: https://github.com/example/incidentbot
+type: reliability_agent
+skills: [Python, workflow automation, state machines, idempotency, webhooks]
+tags: [reliability, incident, agent, workflow, fintech]
+claims:
+  - text: Built an incident-response workflow that correlates alerts with customer impact and drafts status updates for review.
+    evidence: Fictional example repository.
+  - text: Made every external action idempotent and verified after write, so retries never double-apply a change.
+    evidence: Fictional example repository.

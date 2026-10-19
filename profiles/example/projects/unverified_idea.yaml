@@ -1,0 +1,9 @@
+# FICTIONAL example of an UNVERIFIED project. verified: false keeps it off
+# every resume until real evidence (repo, tests, write-up) exists.
+name: Unverified Idea
+verified: false
+source: ""
+type: planned
+skills: []
+tags: []
+claims: []

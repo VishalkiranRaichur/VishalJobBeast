@@ -1,0 +1,37 @@
+<!doctype html>
+<html><body>
+<form id="application-form">
+  <div class="field-wrapper"><label for="first_name">First Name*</label><input id="first_name" aria-required="true"><span class="validation-error">This field is required.</span></div>
+  <label for="preferred_name">Preferred First Name</label><input id="preferred_name">
+  <label for="last_name">Last Name*</label><input id="last_name" aria-required="true">
+  <label for="email">Email*</label><input id="email" aria-required="true">
+  <label for="phone">Phone*</label><input id="phone" aria-required="true">
+  <label for="country">Country*</label><select id="country" aria-required="true"><option>United States</option></select>
+  <label for="candidate-location">Location (City)*</label>
+  <div class="select__container"><input id="candidate-location" role="combobox" aria-expanded="false" aria-required="true"><div id="location-menu"></div></div>
+  <div class="file-upload" aria-labelledby="upload-label-resume"><div id="upload-label-resume">Resume/CV</div><input id="resume" type="file"><span id="resume-name"></span></div>
+  <div class="field-wrapper"><div>LinkedIn Profile</div><input id="linkedin_profile"></div>
+  <div class="field-wrapper"><div>Website</div><input id="website"></div>
+  <label for="export">Astranis complies with U.S. Government space technology export regulations, therefore will you state which of the following applies to you:*</label><select id="export" aria-required="true"><option>None of the above.</option></select>
+  <label for="accomplishment">What is the most impressive thing you have ever accomplished?*</label><textarea id="accomplishment" aria-required="true"></textarea>
+  <label for="season">Please confirm the season you are applying for.*</label><select id="season" aria-required="true"><option>Summer 2027</option></select>
+  <label for="start">When are you able to join Astranis as an intern?*</label><input id="start" aria-required="true">
+  <label for="end">When do you plan on ending your internship?*</label><input id="end" aria-required="true">
+  <label for="onsite">Are you comfortable with working onsite?*</label><select id="onsite" aria-required="true"><option>Yes</option><option>No</option></select>
+  <label for="referral">How did you hear about Astranis?*</label><input id="referral" aria-required="true">
+  <label for="sms">I consent to receive recruiting SMS messages from Astranis.*</label><select id="sms" aria-required="true"><option>Yes</option><option>No</option></select>
+  <fieldset><legend>Voluntary Self-Identification</legend>
+    <label for="gender">Gender</label><select id="gender"><option>Select...</option><option>Male</option><option>Female</option></select>
+    <label for="veteran_status">Veteran Status*</label><select id="veteran_status" aria-required="true"><option>Select...</option><option>I don't wish to answer</option><option>Protected veteran</option></select>
+  </fieldset>
+</form>
+<script>
+  const loc = document.querySelector('#candidate-location');
+  document.querySelector('#first_name').addEventListener('input', () => document.querySelector('.validation-error')?.remove());
+  loc.addEventListener('input', () => {
+    const menu = document.querySelector('#location-menu'); menu.innerHTML = '<div class="select__option">San Jose, California, United States</div>';
+    menu.querySelector('.select__option').onclick = () => { loc.value = 'San Jose, California, United States'; loc.dataset.selected = 'true'; loc.setAttribute('aria-expanded', 'false'); menu.innerHTML = ''; };
+  });
+  document.querySelector('#resume').addEventListener('change', (e) => { document.querySelector('#resume-name').textContent = e.target.files[0]?.name || ''; });
+</script>
+</body></html>

@@ -1,0 +1,30 @@
+[
+  {
+    "company_name": "ExampleAI",
+    "locations": ["San Jose, CA"],
+    "title": "Machine Learning Engineer Intern",
+    "date_posted": 1790000000,
+    "terms": ["Summer 2027"],
+    "active": true,
+    "url": "https://example.com/jobs/1",
+    "is_visible": true,
+    "source": "Simplify",
+    "company_url": "",
+    "date_updated": 1790000000,
+    "id": "fixture-1"
+  },
+  {
+    "company_name": "ClosedCo",
+    "locations": ["Remote"],
+    "title": "Data Science Intern",
+    "date_posted": 1790000000,
+    "terms": ["Summer 2027"],
+    "active": false,
+    "url": "https://example.com/jobs/2",
+    "is_visible": true,
+    "source": "Simplify",
+    "company_url": "",
+    "date_updated": 1790000000,
+    "id": "fixture-2"
+  }
+]

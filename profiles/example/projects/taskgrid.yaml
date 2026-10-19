@@ -1,0 +1,12 @@
+# FICTIONAL example project. Replace with your own verified work.
+name: TaskGrid
+verified: true
+source: https://github.com/example/taskgrid
+type: distributed_platform
+skills: [Python, FastAPI, SQLite, Docker, Linux, distributed systems, scheduling, retries, REST APIs, CI/CD]
+tags: [backend, distributed, infrastructure, platform, scheduler, ci]
+claims:
+  - text: Built a distributed job runner in Python where a FastAPI coordinator assigns work to pull-based workers and persists state in SQLite.
+    evidence: Fictional example repository and tests.
+  - text: Added worker heartbeats, lease-based job claims, and automatic retries so jobs recover when a worker stops responding.
+    evidence: Fictional example repository and tests.

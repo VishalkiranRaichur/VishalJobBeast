@@ -1,0 +1,62 @@
+season: Summer 2027
+simplify:
+  raw_url: https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json
+  active_only: true
+  visible_only: true
+
+search:
+  target_titles:
+    - Data Science Intern
+    - Data Scientist Intern
+    - Machine Learning Intern
+    - Machine Learning Engineer Intern
+    - AI Engineer Intern
+    - Applied AI Intern
+    - Data Engineer Intern
+    - Software Engineer Intern
+    - Backend Engineer Intern
+    - Analytics Intern
+    - Software Engineering Co-op
+    - Data Science Co-op
+  # Empty means do not hard-filter by location. Rank broadly first.
+  preferred_locations: []
+  freshness_days: 14
+
+jobspy:
+  # LinkedIn intentionally omitted by default.
+  sites: [indeed, google, zip_recruiter, glassdoor]
+  country: usa
+
+# LinkedIn via Apify (public logged-out search; no LinkedIn login is used).
+# Token: APIFY_TOKEN in .env (gitignored). Cost is per scraped result, so keep
+# window_minutes a little above the watch interval: overlap only re-buys a few
+# duplicates, and a gap would miss postings.
+# LinkedIn's AI search no longer honours the internship/sort URL filters; only
+# the posted-within window and location are sent, and results are kept only
+# when they are internships with a technical title.
+apify_linkedin:
+  actor: curious_coder/linkedin-jobs-scraper
+  location: United States
+  window_minutes: 60
+  limit_per_search: 25
+  concurrency: 2
+  titles:
+    - Software Engineer Intern
+    - Software Developer Intern
+    - Backend Engineer Intern
+    - Infrastructure Engineer Intern
+    - Platform Engineer Intern
+    - Systems Software Engineer Intern
+    - Data Science Intern
+    - Data Engineer Intern
+    - Machine Learning Engineer Intern
+    - AI Engineer Intern
+    - Data Analytics Intern
+    - Software Engineering Co-op
+
+automation:
+  daily_limit: 75
+  per_run_limit: 25
+  min_score: 55
+  auto_submit: false
+  headed: false

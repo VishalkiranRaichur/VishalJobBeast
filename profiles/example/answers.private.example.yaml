@@ -1,0 +1,53 @@
+# PRIVATE answer vault template (FICTIONAL placeholders only).
+#
+# Copy to profiles/<you>/answers.private.yaml -- that path is gitignored and
+# must NEVER be committed. Fill ONLY answers you have personally confirmed.
+# Anything blank is treated as unknown: the operator stops and asks you.
+#
+# Legal/immigration answers are reused only for questions with the same
+# material meaning; reworded legal questions always go back to the human.
+identity:
+  first_name: ""
+  preferred_name: ""
+  last_name: ""
+  full_legal_name: ""
+  at_least_18: null
+  address_line1: ""
+  address_line2: ""
+  city: ""
+  state: ""
+  postal_code: ""
+  country: ""
+
+work_preferences:
+  sponsorship_required: null
+  sponsorship_now: null
+  sponsorship_future: null
+  open_to_coop: null
+
+legal:
+  work_authorization_answer_requires_employer_review: null
+  authorized_to_work_without_restrictions_us: null
+  authorized_any_employer_without_sponsorship_us: null
+  immigration_status: ""
+
+general_answers:
+  willing_to_travel_percent: ""
+  target_compensation_text: ""
+  current_offers_or_deadlines: null
+
+education_private:
+  cumulative_gpa:
+    value: null
+    confirmed: false
+
+# Voluntary EEO self-identification. These values never leave the local vault:
+# they are stripped from every packet and only typed into a voluntary EEO
+# question by an operator you supervise. Leave blank to always ask/decline.
+voluntary_eeo:
+  gender: ""
+  race: ""
+  hispanic_latino: ""
+  veteran_status: ""
+  disability_status: ""
+  pronouns: ""

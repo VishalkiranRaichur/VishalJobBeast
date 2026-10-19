@@ -1,0 +1,12 @@
+# FICTIONAL example project. Replace with your own verified work.
+name: DocQA
+verified: true
+source: https://github.com/example/docqa
+type: rag_application
+skills: [Python, Retrieval-Augmented Generation, NLP, TF-IDF, Scikit-learn, Streamlit]
+tags: [ai, nlp, rag, document, retrieval]
+claims:
+  - text: Built a document question-answering app that chunks PDFs, retrieves passages with TF-IDF, and generates grounded answers.
+    evidence: Fictional example repository.
+  - text: Displayed the retrieved source passages next to each answer so users can check the grounding.
+    evidence: Fictional example repository.

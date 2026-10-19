@@ -1,0 +1,77 @@
+# Example candidate profile. Every fact here is FICTIONAL.
+#
+# Copy this directory to profiles/<your-name>/ and replace the contents with
+# your own verified facts, then run Job Beast with JOBBEAST_PROFILE=<your-name>.
+# Job Beast only ever puts facts from this profile, verified project files, and
+# evidence.yaml on a resume. If something is not here, it will not be claimed.
+name: Alex Rivera
+headline: Computer Science student building backend and data systems
+location: Springfield, IL
+education:
+  institution: Example State University
+  location: Springfield, IL
+  major: Computer Science
+  degree: Bachelor of Science
+  graduation: May 2028
+links:
+  github: https://github.com/example
+  linkedin: https://www.linkedin.com/in/example
+  portfolio: https://example.com
+contact:
+  phone: (555) 010-0100
+  email: alex.rivera@example.com
+
+core_skills:
+  - Python
+  - Java
+  - SQL
+  - JavaScript
+  - FastAPI
+  - Flask
+  - React
+  - PostgreSQL
+  - SQLite
+  - Docker
+  - Linux
+  - Git
+  - REST APIs
+  - Scikit-learn
+
+target_roles:
+  - Software Engineer Intern
+  - Backend Engineer Intern
+  - Data Engineer Intern
+  - Data Science Intern
+  - Machine Learning Engineer Intern
+
+# Optional: feeds the "no sponsorship available" eligibility gate.
+work_preferences:
+  sponsorship_now: false
+  sponsorship_future: false
+
+# Terms that must never appear on a generated resume (e.g. an unverified
+# project name). Optional.
+forbidden_resume_terms: []
+
+# Experiences in the order they should be preferred on a resume.
+experience:
+  - organization: Example Analytics Co.
+    title: Data Engineering Intern
+    location: Chicago, IL
+    dates: Summer 2026
+    verified: true
+    claims:
+      - text: Built a Python ETL pipeline that loads daily sales extracts into PostgreSQL and validates schema drift before each load.
+        evidence: Fictional example claim.
+      - text: Wrote SQL reporting views and a Flask dashboard used by the operations team to track weekly order volume.
+        evidence: Fictional example claim.
+  - organization: Campus Robotics Club
+    title: Software Lead
+    location: Springfield, IL
+    dates: Aug 2025--Present
+    verified: true
+    claims:
+      - text: Led a 4-person team building a React web console for monitoring robot telemetry over a REST API.
+        evidence: Fictional example claim.
+      - text: Added unit tests and a GitHub Actions CI workflow so every pull request runs the full test suite.
+        evidence: Fictional example claim.

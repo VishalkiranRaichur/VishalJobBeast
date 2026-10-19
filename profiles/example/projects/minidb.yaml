@@ -1,0 +1,12 @@
+# FICTIONAL example project. Replace with your own verified work.
+name: MiniDB
+verified: true
+source: https://github.com/example/minidb
+type: systems_database
+skills: [Java, SQL, relational databases, database internals, B+ tree, indexing, storage engines, unit testing]
+tags: [backend, database, systems, storage]
+claims:
+  - text: Built a small relational database engine in Java with a SQL subset, fixed-size pages, and a B+ tree primary-key index.
+    evidence: Fictional example repository and tests.
+  - text: Implemented an LRU buffer pool with dirty-page flushing and restart persistence, covered by unit tests.
+    evidence: Fictional example repository and tests.

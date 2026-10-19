@@ -1,0 +1,62 @@
+# ---- Secrets & environment -------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---- Candidate private data (NEVER commit) ---------------------------------
+# Only the fictional profiles/example/ directory is meant to be public.
+profiles/*/
+!profiles/example/
+!profiles/example/**
+# These come AFTER the re-include so they win even inside profiles/example/.
+profiles/*/private/
+profiles/*/private.yaml
+profiles/*/answers.private.yaml
+profiles/*/application_answers.yaml
+
+# ---- Runtime data, databases, logs -----------------------------------------
+data/*
+!data/.gitkeep
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.log
+exports/
+
+# ---- Generated application artifacts ---------------------------------------
+output/*
+!output/.gitkeep
+scratchpad/
+*.pdf
+resume_*.png
+*_page1.png
+claude_result.json
+submission.json
+application_packet.*
+
+# ---- Browser state / sessions / cookies ------------------------------------
+browser-session.json
+browser_state*
+storage_state*
+cookies*
+session*.json
+data/browser-profile/
+
+# ---- Python / tooling ------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# ---- Editor / OS / assistant tooling ---------------------------------------
+.DS_Store
+.idea/
+.vscode/
+.refact/
+.claude/
