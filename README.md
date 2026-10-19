@@ -18,7 +18,7 @@ Fresh discovery → eligibility gates → job-description understanding → evid
 
 Internship recruiting had two problems I kept running into.
 
-First, good roles move fast. A strong posting can be crowded within hours, so finding it early matters.
+First, strong roles can attract attention quickly, so finding a good posting early matters.
 
 Second, every application repeats the same work: read the posting, check whether I'm actually eligible, decide which projects fit, tailor the resume, and fill the same form fields again.
 
@@ -98,11 +98,11 @@ CAPTCHA and MFA are never automated, and legal or sensitive questions are answer
 
 **Failure isolation.** Discovery, preparation, and execution fail independently. Each source sync, each job in a batch, and each operator result is handled in its own error boundary and recorded, so one bad posting never stalls discovery.
 
-**Application confirmation.** A clicked Submit button proves nothing: forms fail validation, sessions expire, and redirects land on error pages. An outcome only becomes `SUBMITTED` with independent employer confirmation (a confirmation page or message). Otherwise it is recorded as `SUBMITTED_UNVERIFIED`, which still blocks a duplicate application.
+**Application confirmation.** Clicking Submit is not enough evidence of success: forms fail validation, sessions expire, and redirects land on error pages. An outcome only becomes `SUBMITTED` with independent employer confirmation (a confirmation page or message). Otherwise it is recorded as `SUBMITTED_UNVERIFIED`, which still blocks a duplicate application.
 
 ## Real-world use
 
-Job Beast has been used across **100+ real-world internship application workflows** during development. That meant real postings from Greenhouse, Lever, Ashby, SmartRecruiters, Workday, Jobvite, and others, with all their edge cases: stale listings, JavaScript-only pages, reworded legal questions, custom dropdowns, verification codes, and confirmation pages that never arrive.
+Used across 100+ real-world internship application workflows during development. That meant real postings from Greenhouse, Lever, Ashby, SmartRecruiters, Workday, Jobvite, and others, with all their edge cases: stale listings, JavaScript-only pages, reworded legal questions, custom dropdowns, verification codes, and confirmation pages that never arrive.
 
 Much of the state machine, the eligibility gates, and the "confirmation or it didn't happen" rule came directly from those runs.
 
@@ -133,9 +133,9 @@ Job Beast separates **discovery sources** (where new jobs come from) from **ATS 
 | Discovery: Simplify | First-class source: the SimplifyJobs internship `listings.json` feed (`fetch-simplify`, `fresh`, `watch`). |
 | Discovery: LinkedIn via Apify | Optional. Public, logged-out search through your own Apify token (`fetch-linkedin`, `watch --sources linkedin`). |
 | Discovery: JobSpy | Optional extra for Indeed, Google Jobs, ZipRecruiter, and Glassdoor (`fetch-jobspy`). |
-| ATS detection & hydration | When a discovered URL points at an ATS (Greenhouse, Lever, Ashby, SmartRecruiters, Workday, iCIMS, SuccessFactors, and others), Job Beast detects the provider and fetches the official posting text. |
+| ATS detection & hydration (not a discovery source) | When a discovered URL points at an ATS (Greenhouse, Lever, Ashby, SmartRecruiters, Workday, iCIMS, SuccessFactors, and others), Job Beast detects the provider and fetches the official posting text. |
 
-Job Beast does **not** currently poll ATS boards directly as discovery sources; an ATS is reached through a URL that a discovery source found. Direct board polling is on the roadmap.
+Job Beast does **not** currently poll any ATS (Greenhouse, Lever, Ashby, SmartRecruiters, Workday, or others) for new jobs. An ATS is only reached through a job URL that a discovery source already found; Job Beast then detects the provider and hydrates that one posting. Direct board polling is on the roadmap.
 
 ## Resume intelligence
 
